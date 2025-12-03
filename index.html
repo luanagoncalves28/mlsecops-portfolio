@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema Enterprise de Detecção de Fraudes PIX - MLSecOps Project por Luana Gonçalves">
+    <meta name="keywords" content="MLOps, MLSecOps, Machine Learning, GCP, Kubernetes, Terraform">
+    <meta name="author" content="Luana Gonçalves">
+    <title>MLSecOps PIX - Detecção de Fraudes | Luana Gonçalves</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-icon">🔐</span>
+                <span class="brand-text">MLSecOps PIX</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Projeto</a></li>
+                <li><a href="about.html">Sobre Mim</a></li>
+                <li><a href="https://github.com/luanagoncalves28" target="_blank">GitHub</a></li>
+                <li><a href="mailto:luanagoncalves304@gmail.com" class="btn-contact">Contato</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    🔐 Sistema de Detecção de Fraudes PIX
+                </h1>
+                <p class="hero-subtitle">
+                    Arquitetura MLSecOps Enterprise-Grade para Processamento em Tempo Real
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10k</span>
+                        <span class="stat-label">TPS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">SLA</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">&lt;100ms</span>
+                        <span class="stat-label">Latência</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                </div>
+                <p class="hero-author">
+                    Por <strong>Luana Gonçalves</strong> | ML Engineer | MLOps & MLSecOps
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Project Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">📊 Sobre o Projeto</h2>
+                <p class="section-intro">
+                    Sistema completo de Machine Learning para detecção de fraudes em transações PIX, 
+                    seguindo <strong>Resolução BCB 403/2024</strong>, com arquitetura MLOps e práticas 
+                    de segurança enterprise.
+                </p>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <span class="highlight-icon">⚡</span>
+                        <h3>Real-Time Processing</h3>
+                        <p>Detecção de fraudes em menos de 100ms por transação</p>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-icon">🔒</span>
+                        <h3>Security by Design</h3>
+                        <p>Encryption, RBAC, audit logs e compliance LGPD</p>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-icon">📈</span>
+                        <h3>Production-Ready</h3>
+                        <p>CI/CD, monitoramento, observabilidade completa</p>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-icon">☁️</span>
+                        <h3>Cloud Native</h3>
+                        <p>Infraestrutura 100% como código (Terraform)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">🏗️ Arquitetura End-to-End</h2>
+                <div class="architecture-grid">
+                    <div class="arch-layer">
+                        <div class="layer-header">Camada de Ingestão</div>
+                        <div class="layer-content">
+                            <span class="tech-badge">Cloud Pub/Sub</span>
+                            <span class="tech-badge">Dataflow</span>
+                            <span class="tech-badge">Storage (Bronze)</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="layer-header">Processamento & Features</div>
+                        <div class="layer-content">
+                            <span class="tech-badge">Databricks</span>
+                            <span class="tech-badge">Delta Lake</span>
+                            <span class="tech-badge">Storage (Silver)</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="layer-header">ML Pipeline</div>
+                        <div class="layer-content">
+                            <span class="tech-badge">Vertex AI</span>
+                            <span class="tech-badge">MLflow</span>
+                            <span class="tech-badge">Storage (Gold)</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="layer-header">Serving & API</div>
+                        <div class="layer-content">
+                            <span class="tech-badge">GKE</span>
+                            <span class="tech-badge">Load Balancer</span>
+                            <span class="tech-badge">API Gateway</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="layer-header">Observabilidade</div>
+                        <div class="layer-content">
+                            <span class="tech-badge">Prometheus</span>
+                            <span class="tech-badge">Grafana</span>
+                            <span class="tech-badge">Cloud Logging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">🛠️ Stack Tecnológica</h2>
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h3>☁️ Cloud & Infraestrutura</h3>
+                        <div class="tags">
+                            <span class="tag">GCP</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">Kubernetes (GKE)</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Terraform Cloud</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>🤖 Machine Learning & Data</h3>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Databricks</span>
+                            <span class="tag">Vertex AI</span>
+                            <span class="tag">MLflow</span>
+                            <span class="tag">Apache Spark</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>📊 Observabilidade</h3>
+                        <div class="tags">
+                            <span class="tag">Prometheus</span>
+                            <span class="tag">Grafana</span>
+                            <span class="tag">Cloud Logging</span>
+                            <span class="tag">OpenTelemetry</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>🔐 Segurança</h3>
+                        <div class="tags">
+                            <span class="tag">Vault</span>
+                            <span class="tag">Cloud KMS</span>
+                            <span class="tag">IAM</span>
+                            <span class="tag">OWASP</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>⚙️ DevOps & CI/CD</h3>
+                        <div class="tags">
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">Cloud Build</span>
+                            <span class="tag">Artifact Registry</span>
+                            <span class="tag">GitOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decisions Section -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">💡 Decisões Técnicas Estratégicas</h2>
+                <p class="section-intro">
+                    Como um Staff Engineer pensa: trade-offs, contexto e realidade de produção.
+                </p>
+                <div class="decisions-grid">
+                    <div class="decision-card">
+                        <h3>❓ Por que GCP e não AWS?</h3>
+                        <div class="decision-content">
+                            <p><strong>✅ Neste projeto:</strong> Vertex AI integrado, melhor para ML</p>
+                            <p><strong>💭 Na vida real:</strong> Dependeria do budget e stack existente</p>
+                            <p><strong>📊 Trade-offs:</strong> AWS tem mais serviços, GCP tem melhor DX para ML</p>
+                        </div>
+                    </div>
+                    <div class="decision-card">
+                        <h3>❓ Por que Databricks e não Spark on K8s?</h3>
+                        <div class="decision-content">
+                            <p><strong>✅ Neste projeto:</strong> Feature Store integrado, Delta Lake nativo</p>
+                            <p><strong>💭 Produção real:</strong> Cost vs Time-to-Market</p>
+                            <p><strong>📊 Trade-offs:</strong> Databricks é caro, mas acelera desenvolvimento</p>
+                        </div>
+                    </div>
+                    <div class="decision-card">
+                        <h3>❓ Por que Prometheus + Grafana?</h3>
+                        <div class="decision-content">
+                            <p><strong>✅ Neste projeto:</strong> Open source, integração nativa com GKE</p>
+                            <p><strong>💭 Produção real:</strong> Consideraria Datadog/New Relic para menos overhead</p>
+                            <p><strong>📊 Trade-offs:</strong> OSS = controle, SaaS = menos manutenção</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="context-box">
+                    <h3>🎯 Contexto: Dezembro 2025</h3>
+                    <p><strong>❌ O que eu MUDARIA hoje:</strong></p>
+                    <ul>
+                        <li>Avaliaria <strong>Tecton</strong> para Feature Store (mais moderno que Databricks)</li>
+                        <li>Consideraria <strong>Cloud Run</strong> para serving (custo menor que GKE)</li>
+                        <li>Adicionaria <strong>FinOps desde o início</strong> (cost optimization)</li>
+                        <li>Integraria <strong>LLMOps</strong> para pattern detection avançado</li>
+                    </ul>
+                    <p><strong>✅ O que CONTINUA RELEVANTE:</strong></p>
+                    <ul>
+                        <li>Terraform como IaC (padrão de mercado)</li>
+                        <li>GitOps workflow (best practice universal)</li>
+                        <li>Observability-first design (essencial para produção)</li>
+                        <li>Security by design (nunca sai de moda)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Impact Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">💰 Impacto de Negócio</h2>
+                <p class="section-intro">
+                    Porque tecnologia é meio, não fim. O que importa é valor entregue.
+                </p>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <span class="impact-value">R$ 2.5M/mês</span>
+                        <span class="impact-label">Fraudes evitadas (est. BCB)</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-value">43 min/mês</span>
+                        <span class="impact-label">Downtime máximo (SLA 99.9%)</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-value">95%</span>
+                        <span class="impact-label">Accuracy (5% falsos positivos)</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-value">$3k/mês</span>
+                        <span class="impact-label">Custo infra GCP estimado</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-value">833%</span>
+                        <span class="impact-label">ROI estimado primeiro ano</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-value">100%</span>
+                        <span class="impact-label">Compliance BCB 403/LGPD</span>
+                    </div>
+                </div>
+                <p class="impact-note">
+                    💡 <em>Penso em tecnologia como habilitador de negócio, não como fim em si mesmo.</em>
+                </p>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">🔓 Acesso ao Código</h2>
+                <p class="section-intro">
+                    Para recrutadores, tech leads e gestores que querem avaliar o código.
+                </p>
+                <div class="access-content">
+                    <div class="access-info">
+                        <h3>✅ O que este projeto PROVA:</h3>
+                        <ul>
+                            <li>Arquitetura distribuída em produção</li>
+                            <li>MLOps end-to-end (ingestão → serving)</li>
+                            <li>Security & Compliance (LGPD, BCB)</li>
+                            <li>Infraestrutura como código (Terraform)</li>
+                            <li>Observabilidade e monitoramento</li>
+                            <li>Pensamento estratégico (trade-offs)</li>
+                        </ul>
+                        <h3>❓ Perguntas que você pode me fazer:</h3>
+                        <ul>
+                            <li>"Como escalaria para 100k TPS?"</li>
+                            <li>"Como migraria de GCP para AWS?"</li>
+                            <li>"Como reduziria custo em 40%?"</li>
+                            <li>"Como implementaria A/B testing?"</li>
+                            <li>"Como lidaria com model drift?"</li>
+                        </ul>
+                    </div>
+                    <div class="access-cta">
+                        <button id="accessBtn" class="btn-primary-large">🔓 Como Acessar o Repositório</button>
+                        <div id="accessInstructions" class="access-instructions" style="display:none;">
+                            <div class="instructions-box">
+                                <h3>📋 Instruções de Acesso:</h3>
+                                <ol>
+                                    <li>Faça login na sua conta GitHub</li>
+                                    <li>Acesse o repositório privado via link abaixo</li>
+                                    <li>Se não tiver acesso, envie seu username GitHub para: <strong>luanagoncalves304@gmail.com</strong></li>
+                                    <li>Concederei acesso read-only em até 24h</li>
+                                </ol>
+                                <a href="https://github.com/luanagoncalves28/mlsecops-deteccao-fraudes-pix" 
+                                   class="btn-repo" target="_blank">
+                                    🚀 Ir para o Repositório
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">📬 Vamos Conversar?</h2>
+                <p class="section-intro">
+                    Se você chegou até aqui, provavelmente está avaliando se eu seria um bom fit para seu time.<br>
+                    A resposta curta: <strong>só conversando pra descobrir!</strong>
+                </p>
+                <div class="contact-grid">
+                    <a href="mailto:luanagoncalves304@gmail.com" class="contact-card">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">luanagoncalves304@gmail.com</span>
+                    </a>
+                    <a href="https://linkedin.com/in/luanagoncalves05" target="_blank" class="contact-card">
+                        <span class="contact-icon">💼</span>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">@luanagoncalves05</span>
+                    </a>
+                    <a href="https://github.com/luanagoncalves28" target="_blank" class="contact-card">
+                        <span class="contact-icon">🐙</span>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">@luanagoncalves28</span>
+                    </a>
+                    <div class="contact-card">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-label">Localização</span>
+                        <span class="contact-value">São Paulo, SP - Brasil</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Luana Gonçalves | ML Engineer | MLOps & MLSecOps</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
